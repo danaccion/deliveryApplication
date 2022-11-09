@@ -1,8 +1,8 @@
 import 'controller/login_controller.dart';
-import 'package:dan_s_application3/core/app_export.dart';
-import 'package:dan_s_application3/core/utils/validation_functions.dart';
-import 'package:dan_s_application3/widgets/custom_button.dart';
-import 'package:dan_s_application3/widgets/custom_text_form_field.dart';
+import 'package:dhifflug/core/app_export.dart';
+import 'package:dhifflug/core/utils/validation_functions.dart';
+import 'package:dhifflug/widgets/custom_button.dart';
+import 'package:dhifflug/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends GetWidget<LoginController> {

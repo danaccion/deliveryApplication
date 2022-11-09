@@ -1,5 +1,5 @@
 import '/core/app_export.dart';
-import 'package:dan_s_application3/presentation/profile_screen/models/profile_model.dart';
+import 'package:dhifflug/presentation/profile_screen/models/profile_model.dart';
 import 'package:flutter/material.dart';
 
 class ProfileController extends GetxController {

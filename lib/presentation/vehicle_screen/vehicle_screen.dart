@@ -1,11 +1,11 @@
 import '../vehicle_screen/widgets/vehicle_screen_item_widget.dart';
 import 'controller/vehicle_controller.dart';
 import 'models/vehicle_screen_item_model.dart';
-import 'package:dan_s_application3/core/app_export.dart';
-import 'package:dan_s_application3/widgets/app_bar/appbar_image.dart';
-import 'package:dan_s_application3/widgets/app_bar/appbar_title.dart';
-import 'package:dan_s_application3/widgets/app_bar/custom_app_bar.dart';
-import 'package:dan_s_application3/widgets/custom_button.dart';
+import 'package:dhifflug/core/app_export.dart';
+import 'package:dhifflug/widgets/app_bar/appbar_image.dart';
+import 'package:dhifflug/widgets/app_bar/appbar_title.dart';
+import 'package:dhifflug/widgets/app_bar/custom_app_bar.dart';
+import 'package:dhifflug/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class VehicleScreen extends GetWidget<VehicleController> {
@@ -242,11 +242,16 @@ class VehicleScreen extends GetWidget<VehicleController> {
                           width: 310,
                           text: "lbl_select_vehicle".tr,
                           margin: getMargin(
-                              left: 25, top: 19, right: 22, bottom: 5))
+                              left: 25, top: 19, right: 22, bottom: 5),
+                          onTap: onTapSelectvehicle)
                     ])))));
   }
 
   onTapArrowleft() {
     Get.back();
+  }
+
+  onTapSelectvehicle() {
+    Get.toNamed(AppRoutes.deliveryInformationScreen);
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dan_s_application3/core/app_export.dart';
+import 'package:dhifflug/core/app_export.dart';
 
 class AppDecoration {
   static BoxDecoration get fillBluegray10051 => BoxDecoration(

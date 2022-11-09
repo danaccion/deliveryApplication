@@ -1,5 +1,5 @@
 import '/core/app_export.dart';
-import 'package:dan_s_application3/presentation/splash_screen/models/splash_model.dart';
+import 'package:dhifflug/presentation/splash_screen/models/splash_model.dart';
 
 class SplashController extends GetxController {
   Rx<SplashModel> splashModelObj = SplashModel().obs;

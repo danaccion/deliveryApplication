@@ -1,6 +1,6 @@
 import 'controller/splash_controller.dart';
-import 'package:dan_s_application3/core/app_export.dart';
-import 'package:dan_s_application3/widgets/custom_button.dart';
+import 'package:dhifflug/core/app_export.dart';
+import 'package:dhifflug/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends GetWidget<SplashController> {
@@ -54,7 +54,12 @@ class SplashScreen extends GetWidget<SplashController> {
                           text: "lbl_get_started".tr,
                           margin: getMargin(
                               left: 22, top: 146, right: 22, bottom: 5),
+                          onTap: onTapGetstarted,
                           alignment: Alignment.center)
                     ])))));
+  }
+
+  onTapGetstarted() {
+    Get.toNamed(AppRoutes.registrationScreen);
   }
 }

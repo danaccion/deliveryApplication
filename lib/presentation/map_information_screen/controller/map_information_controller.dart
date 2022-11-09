@@ -1,5 +1,5 @@
 import '/core/app_export.dart';
-import 'package:dan_s_application3/presentation/map_information_screen/models/map_information_model.dart';
+import 'package:dhifflug/presentation/map_information_screen/models/map_information_model.dart';
 import 'package:flutter/material.dart';
 
 class MapInformationController extends GetxController {

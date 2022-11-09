@@ -1,5 +1,5 @@
 import 'controller/app_navigation_controller.dart';
-import 'package:dan_s_application3/core/app_export.dart';
+import 'package:dhifflug/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 class AppNavigationScreen extends GetWidget<AppNavigationController> {

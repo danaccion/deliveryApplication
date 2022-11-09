@@ -1,9 +1,9 @@
 import 'controller/map_information_controller.dart';
-import 'package:dan_s_application3/core/app_export.dart';
-import 'package:dan_s_application3/widgets/app_bar/appbar_image.dart';
-import 'package:dan_s_application3/widgets/app_bar/custom_app_bar.dart';
-import 'package:dan_s_application3/widgets/custom_button.dart';
-import 'package:dan_s_application3/widgets/custom_text_form_field.dart';
+import 'package:dhifflug/core/app_export.dart';
+import 'package:dhifflug/widgets/app_bar/appbar_image.dart';
+import 'package:dhifflug/widgets/app_bar/custom_app_bar.dart';
+import 'package:dhifflug/widgets/custom_button.dart';
+import 'package:dhifflug/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class MapInformationScreen extends GetWidget<MapInformationController> {

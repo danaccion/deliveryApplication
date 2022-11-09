@@ -1,5 +1,5 @@
 import '/core/app_export.dart';
-import 'package:dan_s_application3/presentation/login_screen/models/login_model.dart';
+import 'package:dhifflug/presentation/login_screen/models/login_model.dart';
 import 'package:flutter/material.dart';
 
 class LoginController extends GetxController {
