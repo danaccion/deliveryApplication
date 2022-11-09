@@ -6,6 +6,7 @@ import 'package:dhifflug/widgets/app_bar/custom_app_bar.dart';
 import 'package:dhifflug/widgets/custom_button.dart';
 import 'package:dhifflug/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:dhifflug/data/models/orders/post_orders_req.dart';
 
 class DeliveryInformationScreen
     extends GetWidget<DeliveryInformationController> {
@@ -127,9 +128,12 @@ class DeliveryInformationScreen
                                                                         top: 21,
                                                                         bottom:
                                                                             16),
-                                                                child: Text(
-                                                                    "lbl_cash"
-                                                                        .tr,
+                                                                child: Obx(() => Text(
+                                                                    controller
+                                                                        .deliveryInformationModelObj
+                                                                        .value
+                                                                        .cashTxt
+                                                                        .value,
                                                                     overflow:
                                                                         TextOverflow
                                                                             .ellipsis,
@@ -137,7 +141,7 @@ class DeliveryInformationScreen
                                                                         TextAlign
                                                                             .left,
                                                                     style: AppStyle
-                                                                        .txtPoppinsRegular12)),
+                                                                        .txtPoppinsRegular12))),
                                                             Padding(
                                                                 padding:
                                                                     getPadding(
@@ -342,7 +346,27 @@ class DeliveryInformationScreen
     Get.back();
   }
 
-  onTapConfirminformation() {
-    Get.toNamed(AppRoutes.mapInformationScreen);
+  void onTapConfirminformation() {
+    controller.callCreateOrders(
+      formData,
+      successCall: _onOrderAPIUISuccess,
+      errCall: _onOrderAPIUIError,
+    );
+  }
+
+  void _onOrderAPIUISuccess() {
+    controller.groupFiveController.text =
+        controller.postOrdersResp.data!.itemDescription!.toString();
+    controller.groupSixController.text =
+        controller.postOrdersResp.data!.price!.toString();
+    controller.deliveryInformationModelObj.value.cashTxt.value =
+        controller.postOrdersResp.data!.paymentMethod!.toString();
+    Get.defaultDialog(
+        onConfirm: () => Get.back(), title: "Success", middleText: "Success");
+  }
+
+  void _onOrderAPIUIError() {
+    Get.defaultDialog(
+        onConfirm: () => Get.back(), title: "Error", middleText: "Error");
   }
 }
