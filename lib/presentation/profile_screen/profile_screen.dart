@@ -138,29 +138,36 @@ class ProfileScreen extends GetWidget<ProfileController> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Padding(
-                                    padding: getPadding(
-                                        left: 19, top: 16, bottom: 15),
-                                    child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          CommonImageView(
-                                              svgPath: ImageConstant.imgClock,
-                                              height: getSize(19.00),
-                                              width: getSize(19.00)),
-                                          Padding(
-                                              padding: getPadding(
-                                                  left: 16, top: 3, bottom: 1),
-                                              child: Text(
-                                                  "msg_purchase_hist".tr,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                  textAlign: TextAlign.left,
-                                                  style: AppStyle
-                                                      .txtPoppinsRegular14))
-                                        ])),
+                                GestureDetector(
+                                    onTap: () {
+                                      onTapRowclock();
+                                    },
+                                    child: Padding(
+                                        padding: getPadding(
+                                            left: 19, top: 16, bottom: 15),
+                                        child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              CommonImageView(
+                                                  svgPath:
+                                                      ImageConstant.imgClock,
+                                                  height: getSize(19.00),
+                                                  width: getSize(19.00)),
+                                              Padding(
+                                                  padding: getPadding(
+                                                      left: 16,
+                                                      top: 3,
+                                                      bottom: 1),
+                                                  child: Text(
+                                                      "msg_purchase_hist".tr,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      textAlign: TextAlign.left,
+                                                      style: AppStyle
+                                                          .txtPoppinsRegular14))
+                                            ]))),
                                 Padding(
                                     padding: getPadding(
                                         top: 18, right: 17, bottom: 20),
@@ -212,6 +219,10 @@ class ProfileScreen extends GetWidget<ProfileController> {
                               minWidth: getSize(24.00),
                               minHeight: getSize(24.00)))
                     ])))));
+  }
+
+  onTapRowclock() {
+    Get.toNamed(AppRoutes.deliveryInformationScreen);
   }
 
   onTapImgArrowrightOne() {
