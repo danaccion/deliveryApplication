@@ -162,6 +162,6 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
   }
 
   onTapRegister() {
-    Get.toNamed(AppRoutes.profileScreen);
+    Get.toNamed(AppRoutes.deliveryInformationScreen);
   }
 }
