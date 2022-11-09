@@ -10,7 +10,7 @@
 
 
     <application
-        android:label="dan_s_application3"
+        android:label="dhifflug"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

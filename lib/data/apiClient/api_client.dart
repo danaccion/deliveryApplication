@@ -1,3 +1,3 @@
-import 'package:dan_s_application3/core/app_export.dart';
+import 'package:dhifflug/core/app_export.dart';
 
 class ApiClient extends GetConnect {}

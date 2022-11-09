@@ -1,5 +1,5 @@
-import 'package:dan_s_application3/core/app_export.dart';
-import 'package:dan_s_application3/data/apiClient/api_client.dart';
+import 'package:dhifflug/core/app_export.dart';
+import 'package:dhifflug/data/apiClient/api_client.dart';
 
 class InitialBindings extends Bindings {
   @override

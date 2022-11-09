@@ -1,8 +1,8 @@
 import 'controller/delivery_information_one_controller.dart';
-import 'package:dan_s_application3/core/app_export.dart';
-import 'package:dan_s_application3/widgets/app_bar/appbar_subtitle.dart';
-import 'package:dan_s_application3/widgets/app_bar/custom_app_bar.dart';
-import 'package:dan_s_application3/widgets/custom_bottom_bar.dart';
+import 'package:dhifflug/core/app_export.dart';
+import 'package:dhifflug/widgets/app_bar/appbar_subtitle.dart';
+import 'package:dhifflug/widgets/app_bar/custom_app_bar.dart';
+import 'package:dhifflug/widgets/custom_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 class DeliveryInformationOneScreen

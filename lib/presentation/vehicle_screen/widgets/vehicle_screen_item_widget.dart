@@ -1,6 +1,6 @@
 import '../controller/vehicle_controller.dart';
 import '../models/vehicle_screen_item_model.dart';
-import 'package:dan_s_application3/core/app_export.dart';
+import 'package:dhifflug/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
