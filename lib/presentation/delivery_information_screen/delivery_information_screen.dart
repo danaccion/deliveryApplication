@@ -348,7 +348,6 @@ class DeliveryInformationScreen
 
   void onTapConfirminformation() {
     controller.callCreateOrders(
-      formData,
       successCall: _onOrderAPIUISuccess,
       errCall: _onOrderAPIUIError,
     );

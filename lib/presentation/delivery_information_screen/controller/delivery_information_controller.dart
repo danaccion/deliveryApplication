@@ -29,22 +29,19 @@ class DeliveryInformationController extends GetxController {
     groupSevenController.dispose();
   }
 
-  void callCreateOrders(FormData formData,
+  void callCreateOrders(
       {VoidCallback? successCall, VoidCallback? errCall}) async {
-    return Get.find<ApiClient>().createOrders(
-        onSuccess: (resp) {
-          onCreateOrdersSuccess(resp);
-          if (successCall != null) {
-            successCall();
-          }
-        },
-        onError: (err) {
-          onCreateOrdersError(err);
-          if (errCall != null) {
-            errCall();
-          }
-        },
-        formData: formData);
+    return Get.find<ApiClient>().createOrders(onSuccess: (resp) {
+      onCreateOrdersSuccess(resp);
+      if (successCall != null) {
+        successCall();
+      }
+    }, onError: (err) {
+      onCreateOrdersError(err);
+      if (errCall != null) {
+        errCall();
+      }
+    });
   }
 
   void onCreateOrdersSuccess(var response) {
